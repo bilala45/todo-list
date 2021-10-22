@@ -23,6 +23,8 @@ addItem.addEventListener('submit', event => {
     // Trim whitespace from beginning and end of text input
     const newTodoItem = addItem.add.value.trim();
 
-    createListTemplate(newTodoItem);
+    if (newTodoItem != '') {
+        createListTemplate(newTodoItem);
+    }
 
 })
