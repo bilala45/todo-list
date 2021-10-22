@@ -8,6 +8,9 @@ const createListTemplate = todoItem => {
 
     // Select todos class and append template to innerHTML
     document.querySelector('.todos').innerHTML += template;
+
+    addItem.add.value = '';
+
 }
 
 // Select HTML element of .add
@@ -26,5 +29,7 @@ addItem.addEventListener('submit', event => {
     if (newTodoItem != '') {
         createListTemplate(newTodoItem);
     }
+
+
 
 })
