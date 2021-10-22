@@ -8,9 +8,6 @@ const createListTemplate = todoItem => {
 
     // Select todos class and append template to innerHTML
     document.querySelector('.todos').innerHTML += template;
-
-    addItem.add.value = '';
-
 }
 
 // Select HTML element of .add
@@ -26,10 +23,12 @@ addItem.addEventListener('submit', event => {
     // Trim whitespace from beginning and end of text input
     const newTodoItem = addItem.add.value.trim();
 
+    // Check if input string is empty
     if (newTodoItem != '') {
         createListTemplate(newTodoItem);
+
+        // reset form after string is added 
+        addItem.reset();
     }
-
-
 
 })
