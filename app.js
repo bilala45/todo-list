@@ -4,6 +4,9 @@ const addItem = document.querySelector(".add");
 // Select .todo container
 const todoContainer = document.querySelector('.todos');
 
+// Select search input
+const searchInput = document.querySelector('.search input')
+
 // Generate a list element template
 const createListTemplate = todoItem => {
     const template =
@@ -33,10 +36,9 @@ addItem.addEventListener('submit', event => {
         // reset form after string is added 
         addItem.reset();
     }
-
 })
 
-// Deleting to do list items
+// Delete to do list items
 todoContainer.addEventListener('click', event => {
 
     // Retrieve HTML for item clicked
@@ -48,4 +50,11 @@ todoContainer.addEventListener('click', event => {
         // Removes parent element of trash can element (todo list item)
         elementHTML.parentElement.remove();
     }
+})
+
+// Prevent page reload for search form
+document.querySelector('.search').addEventListener('submit', event => {
+
+    // Prevent page reload upon submit
+    event.preventDefault();
 })
