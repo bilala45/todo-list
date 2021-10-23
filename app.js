@@ -58,3 +58,35 @@ document.querySelector('.search').addEventListener('submit', event => {
     // Prevent page reload upon submit
     event.preventDefault();
 })
+
+// Match text with textContent in todo list
+const matchTodos = text => {
+
+    // Get children of todoContainer and convert to Array
+    Array.from(todoContainer.children)
+
+        // filter out items with textContent that doesn't match the search input
+        .filter(listItem => !(listItem.textContent.includes(text)))
+
+        // cycle through array elements and add class with associated hidden display property
+        .forEach(element => element.classList.add('hide'));
+
+    // Get children of todoContainer and convert to Array
+    Array.from(todoContainer.children)
+
+        // filter out items with textContent that matches the search input
+        .filter(listItem => listItem.textContent.includes(text))
+
+        // cycle through array elements and remove hide class
+        .forEach(element => element.classList.remove('hide'));
+}
+
+// Search and filter todo list items
+searchInput.addEventListener('keyup', event => {
+
+    // Get current value in the search field 
+    const currentInput = searchInput.value.trim();
+
+    // Check currentInput against values in todo list
+    matchTodos(currentInput);
+});
