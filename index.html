@@ -15,36 +15,37 @@
 
     <div class="container">
 
-        <header class="text-center text-light my-4">
+        <header class="text-center text-light mt-5 mb-4">
             <h1 class="mb-4">Todo List</h1>
             <form class="search">
                 <input class="form-control m-auto" type="text" name="search" placeholder="Search your todo list.">
             </form>
         </header>
 
-        <!-- Why are colors not being inherited? -->
-        <ul class="list-group todos mx-auto text-light">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Work on coding project</span>
+        <!-- Why are colors not being inherited from ul class? -->
+        <ul class="list-group todos mx-auto">
+            <li class="text-light list-group-item d-flex justify-content-between align-items-center">
+                <span>Buy eggs</span>
                 <i class="fas fa-trash delete"></i>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Study for GRE</span>
+
+            <li class="text-light list-group-item d-flex justify-content-between align-items-center">
+                <span>Go to the gym</span>
                 <i class="fas fa-trash delete"></i>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span>Make dinner</span>
+
+            <li class="text-light list-group-item d-flex justify-content-between align-items-center">
+                <span>Do laundry</span>
                 <i class="fas fa-trash delete"></i>
             </li>
         </ul>
 
         <form class="add text-center my-4">
-            <label for="addItem" class="text-light">Add a new item...</label>
+            <label for="addItem" class="text-light mb-2">Add a new item.</label>
             <input id="addItem" class="form-control m-auto" type="text" name="add">
         </form>
 
     </div>
-
 
     <script src="app.js"></script>
 </body>
