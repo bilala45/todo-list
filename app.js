@@ -16,7 +16,7 @@ const createListTemplate = todoItem => {
     todoContainer.innerHTML += template;
 }
 
-// Action for page submit
+// Adding to do list items
 addItem.addEventListener('submit', event => {
 
     // Prevent page reload upon submit
@@ -36,7 +36,7 @@ addItem.addEventListener('submit', event => {
 
 })
 
-// Action for clicking trash can icon
+// Deleting to do list items
 todoContainer.addEventListener('click', event => {
 
     // Retrieve HTML for item clicked
